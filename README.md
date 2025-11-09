@@ -36,6 +36,18 @@ ollama pull qwen2.5:7b-instruct
 # set in config/config.yaml: extraction.llm.provider=ollama
 ```
 
+### ingess data from page vietstock: 
+```bash
+# 1) Tạo venv + cài phụ thuộc
+python -m venv .venv && . .venv/bin/activate  # (Windows: .venv\Scripts\activate)
+pip install playwright httpx pandas pymupdf tenacity python-slugify tqdm
+python -m playwright install chromium
+
+# 2) Chạy ingest TPBank
+python ingest_vietstock_docs.py --symbol TPB --out ./data/raw --max-wait 25 --pdf-text
+
+```
+
 ### Provide inputs
 Edit `data/banks.csv` with **real** bank names, report URLs, and year. Example row is included.
 
