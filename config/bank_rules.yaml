@@ -1,0 +1,29 @@
+bank_defaults:
+  patterns:
+    GHG_Scope1:
+      - "(?i)(?:scope\s*1|phạm\s*vi\s*1)[^\n]{0,80}?(\d[\d\.,]*)\s*(tco2e|tco₂e)"
+    Energy_Consumption:
+      - "(?i)(?:tiêu\s*thụ\s*(?:điện|năng\s*lượng)|energy\s*consumption)[^\n]{0,80}?(\d[\d\.,]*)\s*(kwh|mwh|gwh)"
+    Female_Board_Ratio:
+      - "(?i)(?:tỷ\s*lệ\s*nữ.*?(?:hđqt|hội\s*đồng\s*quản\s*trị)|female.*?board)[^\n]{0,80}?(\d[\d\.,]*)\s*%"
+    Board_Size:
+      - "(?i)(?:số\s*lượng\s*thành\s*viên\s*(?:hđqt|hội\s*đồng\s*quản\s*trị)|board\s*size)[^\n]{0,60}?(\d+)"
+banks:
+  Vietcombank:
+    patterns:
+      GHG_Scope1:
+        - "(?i)phát\s*thải(?:\s*khí\s*nhà\s*kính)?\s*phạm\s*vi\s*1[^\n]{0,80}?(\d[\d\.,]*)\s*(tco2e|tco₂e)"
+      Energy_Consumption:
+        - "(?i)(tổng\s*tiêu\s*thụ\s*điện|điện\s*tiêu\s*thụ)[^\n]{0,80}?(\d[\d\.,]*)\s*(kwh|mwh|gwh)"
+  BIDV:
+    patterns:
+      Energy_Consumption:
+        - "(?i)(tổng\s*tiêu\s*thụ\s*điện|năng\s*lượng\s*tiêu\s*thụ)[^\n]{0,80}?(\d[\d\.,]*)\s*(kwh|mwh|gwh)"
+      Female_Board_Ratio:
+        - "(?i)tỷ\s*lệ\s*nữ\s*hđqt[^\n]{0,80}?(\d[\d\.,]*)\s*%"
+  Techcombank:
+    patterns:
+      Female_Board_Ratio:
+        - "(?i)tỷ\s*lệ\s*nữ\s*hđqt[^\n]{0,80}?(\d[\d\.,]*)\s*%"
+      Board_Size:
+        - "(?i)hđqt\s*có\s*(\d+)\s*thành\s*viên"

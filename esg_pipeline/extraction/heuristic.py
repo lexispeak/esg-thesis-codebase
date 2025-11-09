@@ -1,21 +1,42 @@
-import re
+import re, yaml
 from typing import Dict, Any, List
 from ..normalizer import to_number, standardize_unit
 
-# Simple keyword/regex examples — extend per bank/report pattern
-PATTERNS = {
-    "GHG_Scope1": r"(?:scope\s*1|phạm vi\s*1).{0,50}?(\d[\d\.,]*)\s*(tco2e|tco₂e)?",
-    "Energy_Consumption": r"(?:tiêu thụ năng lượng|energy consumption).{0,50}?(\d[\d\.,]*)\s*(kwh|mwh)",
-    "Female_Board_Ratio": r"(?:tỷ lệ nữ.*?hđqt|female.*?board).{0,50}?(\d[\d\.,]*)\s*%",
-    "Board_Size": r"(?:số lượng thành viên hđqt|board size).{0,50}?(\d+)",
-}
+def _window(text: str, start: int, end: int, pad: int=80) -> str:
+    s = max(0, start-pad)
+    e = min(len(text), end+pad)
+    return text[s:e].replace("\n", " ")
 
-def extract(text: str) -> List[Dict[str, Any]]:
-    out = []
-    for field, rx in PATTERNS.items():
-        m = re.search(rx, text, flags=re.I|re.S|re.U)
-        if m:
-            val = to_number(m.group(1), decimal_comma=True)
-            unit = standardize_unit(m.group(2) if len(m.groups())>=2 else "")
-            out.append({"field": field, "value_raw": m.group(1), "value": val, "unit": unit, "confidence": 0.7, "source": "heuristic"})
+def load_rules(path:str) -> Dict[str, Any]:
+    with open(path, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+def compile_patterns(rules: Dict[str, Any], bank: str) -> Dict[str, List[re.Pattern]]:
+    pats = {}
+    defaults = rules.get("bank_defaults", {}).get("patterns", {})
+    for field, arr in defaults.items():
+        pats.setdefault(field, [])
+        for rx in arr:
+            pats[field].append(re.compile(rx, flags=re.I|re.S|re.U))
+    bspec = rules.get("banks", {}).get(bank, {}).get("patterns", {})
+    for field, arr in bspec.items():
+        pats.setdefault(field, [])
+        for rx in arr:
+            pats[field].append(re.compile(rx, flags=re.I|re.S|re.U))
+    return pats
+
+def extract(text: str, bank: str, rules_path: str) -> List[Dict[str, Any]]:
+    rules = load_rules(rules_path)
+    patterns = compile_patterns(rules, bank)
+    out: List[Dict[str, Any]] = []
+    for field, rxs in patterns.items():
+        for rx in rxs:
+            m = rx.search(text)
+            if m:
+                val = to_number(m.group(1), decimal_comma=True)
+                unit = standardize_unit(m.group(2) if len(m.groups())>=2 else "")
+                ev = _window(text, m.start(1), m.end(1))
+                out.append({"field": field, "value_raw": m.group(1), "value": val, "unit": unit,
+                            "confidence": 0.75, "source": "heuristic", "evidence": ev})
+                break
     return out

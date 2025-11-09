@@ -1,10 +1,10 @@
-name: esg-thesis
+name: esg-thesis-codebase
 channels:
   - conda-forge
 dependencies:
   - python=3.10
   - pip
-  - poppler  # for pdftotext (Linux/macOS) - optional
+  - poppler
   - pip:
       - pymupdf==1.24.10
       - pdfminer.six==20240706

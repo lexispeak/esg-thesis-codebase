@@ -9,10 +9,11 @@ This repository provides a **production-grade, end-to-end** ESG data pipeline fo
 ### Option A — Conda (Windows/macOS/Linux)
 ```bash
 conda env create -f environment.yml
-conda activate esg-thesis
+conda activate esg-thesis-codebase
 # Install system deps if needed:
 # - Windows: install Tesseract OCR (https://github.com/UB-Mannheim/tesseract/wiki) and add to PATH
-# - macOS: brew install tesseract poppler
+# - macOS: brew install tesseract
+#           brew install poppler
 # - Linux: apt-get install -y tesseract-ocr poppler-utils
 python -m pip install -e .
 ```
