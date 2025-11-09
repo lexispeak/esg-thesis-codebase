@@ -24,7 +24,7 @@ except Exception:
     HAS_FITZ = False
 
 BASE = "https://finance.vietstock.vn"
-DOC_PAGE_TMPL = "{base}/{symbol}/tai-tai-lieu.htm?doctype="
+DOC_PAGE_TMPL = "{base}/{symbol}/tai-tai-lieu.htm?doctype={doctype_id}"
 DOWNLOAD_PREFIX = "/downloadedoc/"
 YEAR_RE = re.compile(r"(?<!\d)(20\d{2}|19\d{2})(?!\d)")
 DATE_RE = re.compile(r"(\d{1,2}[/-]\d{1,2}[/-](\d{2,4}))", re.I)
@@ -116,7 +116,15 @@ class DocMeta:
     source: str = "VietstockDocuments"
     ts_crawled: float = time.time()
 
-def guess_doctype_from_context(text_blob: str) -> Optional[str]:
+def guess_doctype_from_context(text_blob: str, doctype_id: Optional[str] = None) -> Optional[str]:
+    # Map Vietstock doctype id to normalized label
+    DOCTYPE_ID_MAP = {
+        "1": "Financial Statements",
+        "9": "Governance Report",
+        "2": "Annual Report"
+    }
+    if doctype_id and doctype_id in DOCTYPE_ID_MAP:
+        return DOCTYPE_ID_MAP[doctype_id]
     x = (text_blob or "").lower()
     for k, v in DOC_TYPE_KEYWORDS.items():
         if k in x:
@@ -306,32 +314,38 @@ async def collect_all_pages(page, max_pages: int = 200, max_wait: int = 20) -> L
 async def ingest_symbol(symbol: str, out_dir: Path, max_wait: int = 25,
                         pdf_text: bool = False, only_year_from: Optional[int] = None,
                         doctype_filters: Optional[List[str]] = None) -> List[DocMeta]:
-    url = DOC_PAGE_TMPL.format(base=BASE, symbol=symbol.lower())
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # Phase 1: Crawl all document metadata from web UI
-    print(f"\n[*] Phase 1: Crawling document list for {symbol}...")
+    # Crawl all doctype_ids: 1 (Financial), 9 (Governance), 2 (Annual)
+    all_items = []
+    DOCTYPE_IDS = ["1", "9", "2"]
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         ctx = await browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
-        page = await ctx.new_page()
-        await page.goto(url, wait_until="domcontentloaded", timeout=45000)
-
-        items = await collect_all_pages(page, max_pages=200, max_wait=max_wait)
-
+        for doctype_id in DOCTYPE_IDS:
+            url = DOC_PAGE_TMPL.format(base=BASE, symbol=symbol.lower(), doctype_id=doctype_id)
+            print(f"\n[*] Crawling {symbol} doctype={doctype_id} at {url}")
+            page = await ctx.new_page()
+            await page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            items = await collect_all_pages(page, max_pages=200, max_wait=max_wait)
+            all_items.extend([dict(it, _doctype_id=doctype_id) for it in items])
+            await page.close()
         await ctx.close()
         await browser.close()
 
     # Pre-process all items to extract doctype, year etc. before downloading
     print("[*] Processing metadata...")
     processed_items = []
-    for it in items:
+    for it in all_items:
         href = it["url"]
         m = re.search(r"/downloadedoc/(\d+)", href)
         doc_id = m.group(1) if m else re.sub(r"\W+", "", href)[-10:]
         title = it.get("title") or f"document-{doc_id}"
+        title_nospace = re.sub(r"\s+", "_", title)
         context = (it.get("context") or "") + " " + (title or "")
-        doctype = guess_doctype_from_context(context)
+        # Use _doctype_id from crawl loop if present
+        doctype_id = it.get('_doctype_id')
+        doctype = guess_doctype_from_context(context, doctype_id)
         year = it.get("year_guess")
         # Try to find year in various places if not found
         for pat in [title, it.get("posted_date_raw"), context]:
@@ -352,11 +366,10 @@ async def ingest_symbol(symbol: str, out_dir: Path, max_wait: int = 25,
             hay = " ".join([str(doctype or ""), str(title or ""), str(context or "")]).lower()
             if not any(f in hay for f in filters):
                 continue
-        
         processed_items.append({
             "doc_id": doc_id,
             "url": href,
-            "title": title,
+            "title": title_nospace,
             "context": context,
             "doctype": doctype,
             "year": year,

@@ -45,6 +45,8 @@ python -m playwright install chromium
 
 # 2) Chạy ingest TPBank
 python ./esg_pipeline/ingestion/ingest_vietstock_docs.py --symbol TPB --out ./data/raw --max-wait 25 --pdf-text
+# điều chỉnh doc-type để lấy dữ liệu từ vietstock
+python ./esg_pipeline/ingestion/ingest_vietstock_docs.py --symbol TPB --out ./data/raw --max-wait 25 --pdf-text
 
 ```
 
