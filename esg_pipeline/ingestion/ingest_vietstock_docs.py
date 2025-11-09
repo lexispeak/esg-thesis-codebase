@@ -10,9 +10,13 @@ from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_excep
 from slugify import slugify
 from playwright.async_api import async_playwright, TimeoutError as PWTimeout
 import zipfile
-from .html_helpers import parse_links_from_html
 
-# PDF text extract (optional)
+try:
+    from tqdm import tqdm
+    HAS_TQDM = True
+except Exception:
+    HAS_TQDM = False
+
 try:
     import fitz  # PyMuPDF
     HAS_FITZ = True
@@ -22,6 +26,8 @@ except Exception:
 BASE = "https://finance.vietstock.vn"
 DOC_PAGE_TMPL = "{base}/{symbol}/tai-tai-lieu.htm?doctype="
 DOWNLOAD_PREFIX = "/downloadedoc/"
+YEAR_RE = re.compile(r"(?<!\d)(20\d{2}|19\d{2})(?!\d)")
+DATE_RE = re.compile(r"(\d{1,2}[/-]\d{1,2}[/-](\d{2,4}))", re.I)
 
 DOC_TYPE_KEYWORDS = {
     "báo cáo tài chính": "Financial Statements",
@@ -40,6 +46,59 @@ DOC_TYPE_KEYWORDS = {
 
 YEAR_RE = re.compile(r"(?<!\d)(20\d{2}|19\d{2})(?!\d)")
 DATE_RE = re.compile(r"(\d{1,2}[/-]\d{1,2}[/-](\d{2,4}))", re.I)
+
+def parse_links_from_html(html: str) -> List[Dict[str, Any]]:
+    """
+    Lightweight HTML link parser to extract document links and nearby metadata from a
+    Vietstock-like HTML snippet. Dependency-free so it can be unit-tested without
+    Playwright or other heavy runtime dependencies.
+    """
+    links: List[Dict[str, Any]] = []
+    anchor_re = re.compile(r'<a[^>]+href=["\'](?P<href>[^"\']+)["\'][^>]*?(?:title=["\'](?P<title>[^"\']*)["\'])?[^>]*>(?P<inner>.*?)</a>', re.S | re.I)
+    span_lastupdate_re = re.compile(r'<span[^>]*class=["\'][^"\']*lastupdate[^"\']*["\'][^>]*>(?P<date>[^<]+)</span>', re.I)
+
+    for m in anchor_re.finditer(html):
+        href = m.group('href')
+        title_attr = m.group('title') or ''
+        inner = m.group('inner') or ''
+
+        inner_text = re.sub(r'<[^>]+>', ' ', inner).strip()
+        title_text = (title_attr.strip() or inner_text).strip()
+
+        posted_raw = None
+        s = span_lastupdate_re.search(inner)
+        if s:
+            posted_raw = s.group('date').strip()
+        else:
+            post_chunk = html[m.end(): m.end()+200]
+            s2 = span_lastupdate_re.search(post_chunk)
+            if s2:
+                posted_raw = s2.group('date').strip()
+
+        ctx_start = max(0, m.start()-200)
+        ctx_end = min(len(html), m.end()+200)
+        context = re.sub(r'\s+', ' ', html[ctx_start:ctx_end]).strip()
+
+        myear = YEAR_RE.search((context or '') + ' ' + title_text)
+        year = int(myear.group(1)) if myear else None
+
+        full = urljoin(BASE, href)
+
+        href_l = href.lower()
+        is_download_proxy = DOWNLOAD_PREFIX in href
+        is_static_file = any(ext in href_l for ext in ['.pdf', '.zip', '.csv', '.xlsx', '.xls', '.doc', '.docx']) or 'static2.vietstock.vn' in href_l or '/data/' in href_l
+        if not (is_download_proxy or is_static_file):
+            continue
+
+        links.append({
+            'url': full,
+            'title': title_text,
+            'context': context,
+            'posted_date_raw': posted_raw,
+            'year_guess': year
+        })
+
+    return links
 
 @dataclass
 class DocMeta:
@@ -121,13 +180,23 @@ async def download_file(client: httpx.AsyncClient, url: str, out_stub: Path) -> 
         out_path = out_stub.with_suffix(ext)
         out_path.parent.mkdir(parents=True, exist_ok=True)
         bytes_written = 0
-        with open(out_path, "wb") as f:
-            async for chunk in r.aiter_bytes():
-                f.write(chunk)
-                bytes_written += len(chunk)
-                if bytes_written % (1024*1024) == 0:  # every MB
-                    print(f"    Downloaded: {bytes_written/1024/1024:.1f}MB", end="\r")
-    print(f"    Total downloaded: {bytes_written/1024/1024:.1f}MB")
+        total = int(r.headers.get("Content-Length") or 0)
+        # Use tqdm if available for a nicer progress bar
+        if HAS_TQDM:
+            with open(out_path, "wb") as f, tqdm(total=total, unit='B', unit_scale=True, desc=out_path.name, leave=False) as pbar:
+                async for chunk in r.aiter_bytes():
+                    f.write(chunk)
+                    bytes_written += len(chunk)
+                    pbar.update(len(chunk))
+        else:
+            with open(out_path, "wb") as f:
+                async for chunk in r.aiter_bytes():
+                    f.write(chunk)
+                    bytes_written += len(chunk)
+                    if bytes_written % (1024*1024) == 0:  # every MB
+                        print(f"    Downloaded: {bytes_written/1024/1024:.1f}MB", end="\r")
+    if not HAS_TQDM:
+        print(f"    Total downloaded: {bytes_written/1024/1024:.1f}MB")
     return bytes_written, out_path
 
 async def _collect_downloads_on_current_page(page, links_seen: Dict[str, Dict[str, Any]]):
@@ -235,7 +304,8 @@ async def collect_all_pages(page, max_pages: int = 200, max_wait: int = 20) -> L
     return list(links_seen.values())
 
 async def ingest_symbol(symbol: str, out_dir: Path, max_wait: int = 25,
-                        pdf_text: bool = False, only_year_from: Optional[int] = None) -> List[DocMeta]:
+                        pdf_text: bool = False, only_year_from: Optional[int] = None,
+                        doctype_filters: Optional[List[str]] = None) -> List[DocMeta]:
     url = DOC_PAGE_TMPL.format(base=BASE, symbol=symbol.lower())
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -276,6 +346,12 @@ async def ingest_symbol(symbol: str, out_dir: Path, max_wait: int = 25,
 
         if only_year_from and year and year < only_year_from:
             continue
+        # filter by doctype if requested (case-insensitive substring match against doctype/title/context)
+        if doctype_filters:
+            filters = [f.lower() for f in doctype_filters]
+            hay = " ".join([str(doctype or ""), str(title or ""), str(context or "")]).lower()
+            if not any(f in hay for f in filters):
+                continue
         
         processed_items.append({
             "doc_id": doc_id,
@@ -432,6 +508,7 @@ def main():
     ap.add_argument("--max-wait", type=int, default=25, help="Max seconds per page")
     ap.add_argument("--pdf-text", action="store_true", help="Extract PDF text with PyMuPDF")
     ap.add_argument("--year-from", type=int, default=None, help="Only keep docs with year >= this")
+    ap.add_argument("--doctype", action="append", help="Filter by doctype/title/context (case-insensitive substring). Can be used multiple times")
     args = ap.parse_args()
 
     out_dir = Path(args.out)
@@ -440,7 +517,8 @@ def main():
         out_dir=out_dir,
         max_wait=args.max_wait,
         pdf_text=args.pdf_text,
-        only_year_from=args.year_from
+        only_year_from=args.year_from,
+        doctype_filters=args.doctype
     ))
     write_outputs(args.symbol, metas, out_dir)
 
