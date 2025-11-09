@@ -44,7 +44,7 @@ pip install playwright httpx pandas pymupdf tenacity python-slugify tqdm
 python -m playwright install chromium
 
 # 2) Chạy ingest TPBank
-python ingest_vietstock_docs.py --symbol TPB --out ./data/raw --max-wait 25 --pdf-text
+python ./esg_pipeline/ingestion/ingest_vietstock_docs.py --symbol TPB --out ./data/raw --max-wait 25 --pdf-text
 
 ```
 
