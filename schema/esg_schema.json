@@ -1,0 +1,1991 @@
+[
+  {
+    "pillar": "E",
+    "field": "GHG_Scope1",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG/Thường niên",
+    "Standard": "IFRS S2; GRI 305",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "GHG_Scope2",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG/Thường niên",
+    "Standard": "IFRS S2; GRI 305",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "GHG_Scope3_Total",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "IFRS S2; GHG Protocol",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat1_PurchasedGoods",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat2_CapitalGoods",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat3_FuelEnergyUpstream",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat4_UpstreamTransport",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat5_Waste",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat6_BusinessTravel",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat7_EmployeeCommuting",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat8_LeasedAssetsUp",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat9_DownstreamTransport",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat10_ProcessingSoldProducts",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat11_UseOfSoldProducts",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat12_EndOfLife",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat13_LeasedAssetsDown",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat14_Franchises",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Scope3_Cat15_Investments",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Báo cáo ESG; ước lượng",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Financed_Emissions_Total",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Ước lượng theo PCAF từ dư nợ theo ngành",
+    "Standard": "PCAF Global Standard",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "E",
+    "field": "Financed_Emissions_Energy",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Dư nợ theo ngành + hệ số phát thải",
+    "Standard": "PCAF; IPCC factors",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "E",
+    "field": "Financed_Emissions_Utilities",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Dư nợ theo ngành + hệ số phát thải",
+    "Standard": "PCAF; IPCC factors",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "E",
+    "field": "Financed_Emissions_Cement",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Dư nợ theo ngành + hệ số phát thải",
+    "Standard": "PCAF; IPCC factors",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "E",
+    "field": "Financed_Emissions_Steel",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Dư nợ theo ngành + hệ số phát thải",
+    "Standard": "PCAF; IPCC factors",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "E",
+    "field": "Financed_Emissions_Chemicals",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Dư nợ theo ngành + hệ số phát thải",
+    "Standard": "PCAF; IPCC factors",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "E",
+    "field": "Financed_Emissions_RealEstate",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Dư nợ theo ngành + hệ số phát thải",
+    "Standard": "PCAF; IPCC factors",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "E",
+    "field": "Financed_Emissions_Transport",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Dư nợ theo ngành + hệ số phát thải",
+    "Standard": "PCAF; IPCC factors",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "E",
+    "field": "Financed_Emissions_Agriculture",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Dư nợ theo ngành + hệ số phát thải",
+    "Standard": "PCAF; IPCC factors",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "E",
+    "field": "Financed_Emissions_Manufacturing",
+    "Type": "numeric",
+    "Unit": "tCO₂e",
+    "Source": "Dư nợ theo ngành + hệ số phát thải",
+    "Standard": "PCAF; IPCC factors",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "E",
+    "field": "Green_Credit_Ratio",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo ngân hàng; SBV",
+    "Standard": "VN Green Taxonomy 2025",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Taxonomy_Alignment_Ratio",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo nội bộ/ngân hàng",
+    "Standard": "VN Green Taxonomy 2025",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Energy_Consumption",
+    "Type": "numeric",
+    "Unit": "kWh",
+    "Source": "Báo cáo ESG",
+    "Standard": "GRI 302",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "E",
+    "field": "Renewable_Energy_Share",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo ESG",
+    "Standard": "GRI 302",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Water_Consumption",
+    "Type": "numeric",
+    "Unit": "m³",
+    "Source": "Báo cáo ESG",
+    "Standard": "GRI 303",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Waste_Generated",
+    "Type": "numeric",
+    "Unit": "tấn",
+    "Source": "Báo cáo ESG",
+    "Standard": "GRI 306",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Paper_Consumption",
+    "Type": "numeric",
+    "Unit": "kg",
+    "Source": "Báo cáo ESG",
+    "Standard": "GRI 301",
+    "Update": "năm"
+  },
+  {
+    "pillar": "E",
+    "field": "Env_Violations_Cases",
+    "Type": "numeric",
+    "Unit": "vụ",
+    "Source": "Tin tức; cơ quan nhà nước",
+    "Standard": "GRI 307",
+    "Update": "tháng/quý"
+  },
+  {
+    "pillar": "S",
+    "field": "Female_Board_Ratio",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo quản trị",
+    "Standard": "GRI 405; OECD 2023",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Board_Diversity_Index",
+    "Type": "numeric",
+    "Unit": "0–1",
+    "Source": "Báo cáo quản trị; website",
+    "Standard": "GRI 405; OECD 2023",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Executives_Female_Ratio",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo quản trị",
+    "Standard": "GRI 405",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Median_Gender_Pay_Gap",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo nhân sự",
+    "Standard": "GRI 405-2",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Employee_Count",
+    "Type": "numeric",
+    "Unit": "người",
+    "Source": "Báo cáo nhân sự",
+    "Standard": "GRI 2-7",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "S",
+    "field": "Employee_Turnover",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo nhân sự",
+    "Standard": "GRI 401",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Training_Hours_Avg",
+    "Type": "numeric",
+    "Unit": "giờ",
+    "Source": "Báo cáo ESG",
+    "Standard": "GRI 404",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Training_Coverage",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo ESG",
+    "Standard": "GRI 404",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "HSE_Accidents",
+    "Type": "numeric",
+    "Unit": "vụ",
+    "Source": "Báo cáo ESG; tin tức",
+    "Standard": "GRI 403",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Union_Coverage",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo nhân sự",
+    "Standard": "GRI 407",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Remote_Work_Share",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo nhân sự/ESG",
+    "Standard": "GRI 401",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Inclusive_Finance_Programs",
+    "Type": "numeric",
+    "Unit": "chương trình",
+    "Source": "Báo cáo CSR; website",
+    "Standard": "GRI 203",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "S",
+    "field": "SME_Loans_Ratio",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo tín dụng; SBV",
+    "Standard": "GRI 203",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Customer_Complaints",
+    "Type": "numeric",
+    "Unit": "vụ",
+    "Source": "Báo cáo dịch vụ KH; Cục QLCT",
+    "Standard": "GRI 418",
+    "Update": "quý"
+  },
+  {
+    "pillar": "S",
+    "field": "Customer_Data_Breaches",
+    "Type": "numeric",
+    "Unit": "vụ",
+    "Source": "Tin tức; công bố ngân hàng",
+    "Standard": "GRI 418",
+    "Update": "tháng/quý"
+  },
+  {
+    "pillar": "S",
+    "field": "Accessibility_Score",
+    "Type": "numeric",
+    "Unit": "0–1",
+    "Source": "Website; khảo sát",
+    "Standard": "UN SDGs; GRI 203",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Community_Investment",
+    "Type": "numeric",
+    "Unit": "tỷ VND",
+    "Source": "Báo cáo CSR/ESG",
+    "Standard": "GRI 413",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Volunteer_Hours",
+    "Type": "numeric",
+    "Unit": "giờ",
+    "Source": "Báo cáo CSR/ESG",
+    "Standard": "GRI 413",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Social_Controversies_Count",
+    "Type": "numeric",
+    "Unit": "vụ",
+    "Source": "Tin tức (GDELT/NewsAPI)",
+    "Standard": "JIFMIM 2024 (ESG-washing); GRI 2-21",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "S",
+    "field": "Human_Rights_Policy",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Website; báo cáo",
+    "Standard": "GRI 412",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Supplier_Screening_ESG",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo bền vững",
+    "Standard": "GRI 308/414",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Employee_Wellbeing_Programs",
+    "Type": "numeric",
+    "Unit": "chương trình",
+    "Source": "Báo cáo nhân sự",
+    "Standard": "GRI 403/401",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Training_ESG_Specific",
+    "Type": "numeric",
+    "Unit": "giờ",
+    "Source": "Báo cáo ESG; nội bộ",
+    "Standard": "IFRS S2 (năng lực quản trị rủi ro khí hậu)",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Diversity_Disclosure_Granularity",
+    "Type": "ordinal",
+    "Unit": "0–3",
+    "Source": "Báo cáo quản trị",
+    "Standard": "GRI 405",
+    "Update": "năm"
+  },
+  {
+    "pillar": "S",
+    "field": "Customer_Satisfaction_Index",
+    "Type": "numeric",
+    "Unit": "0–100",
+    "Source": "Báo cáo dịch vụ",
+    "Standard": "GRI 418",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "S",
+    "field": "Financial_Literacy_Programs",
+    "Type": "numeric",
+    "Unit": "chương trình",
+    "Source": "CSR/ESG",
+    "Standard": "GRI 203",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Board_Size",
+    "Type": "numeric",
+    "Unit": "người",
+    "Source": "Báo cáo quản trị",
+    "Standard": "OECD 2023",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Board_Independence_Ratio",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo quản trị",
+    "Standard": "OECD 2023; GRI 2-9",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Board_Chair_CEO_Duality",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Báo cáo quản trị",
+    "Standard": "OECD 2023",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Avg_Board_Tenure",
+    "Type": "numeric",
+    "Unit": "năm",
+    "Source": "Báo cáo quản trị",
+    "Standard": "OECD 2023",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Board_Age_Avg",
+    "Type": "numeric",
+    "Unit": "tuổi",
+    "Source": "Báo cáo quản trị",
+    "Standard": "OECD 2023",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Risk_Committee_Existence",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Báo cáo quản trị",
+    "Standard": "IFRS S1/S2",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Audit_Committee_Independence",
+    "Type": "numeric",
+    "Unit": "0–1",
+    "Source": "Báo cáo quản trị",
+    "Standard": "OECD 2023",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "ESG_Policies_Count",
+    "Type": "numeric",
+    "Unit": "tài liệu",
+    "Source": "Website ngân hàng",
+    "Standard": "IFRS S1/S2; GRI 2",
+    "Update": "quý"
+  },
+  {
+    "pillar": "G",
+    "field": "NetZero_Target_Exist",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Website; báo cáo",
+    "Standard": "SBTi/Net-Zero Standard",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "TCFD_Alignment_Level",
+    "Type": "ordinal",
+    "Unit": "0–3",
+    "Source": "Báo cáo ESG",
+    "Standard": "IFRS S1/S2",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Scenario_Analysis_Disclosed",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Báo cáo ESG",
+    "Standard": "IFRS S2",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Stress_Test_Climate",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Báo cáo rủi ro",
+    "Standard": "IFRS S2",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "ThirdParty_Assurance_ESG",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Báo cáo ESG",
+    "Standard": "ISAE 3000; GRI 2-5",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Disclosure_Quality_Score",
+    "Type": "numeric",
+    "Unit": "0–100",
+    "Source": "Báo cáo ESG",
+    "Standard": "JIFMIM 2024; IFRS S1/S2",
+    "Update": "năm/quý"
+  },
+  {
+    "pillar": "G",
+    "field": "ESG_Washing_Index",
+    "Type": "numeric",
+    "Unit": "0–1",
+    "Source": "Báo cáo ESG + tin tức",
+    "Standard": "JIFMIM 2024 (ESG-washing)",
+    "Update": "quý"
+  },
+  {
+    "pillar": "G",
+    "field": "Exec_Comp_Disclosure",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Báo cáo thường niên",
+    "Standard": "GRI 2-19/2-20",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Anti_Corruption_Cases",
+    "Type": "numeric",
+    "Unit": "vụ",
+    "Source": "Tin tức; cơ quan nhà nước",
+    "Standard": "GRI 205",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "G",
+    "field": "Shareholder_Rights_Score",
+    "Type": "numeric",
+    "Unit": "0–1",
+    "Source": "Điều lệ; quy chế",
+    "Standard": "OECD 2023",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Whistleblowing_Channel",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Website; báo cáo",
+    "Standard": "OECD; GRI 2-26",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Data_Privacy_Governance",
+    "Type": "ordinal",
+    "Unit": "0–2",
+    "Source": "Báo cáo; chính sách",
+    "Standard": "GRI 418",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Board_ESG_Expertise_Ratio",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Hồ sơ HĐQT",
+    "Standard": "OECD 2023",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "ROA",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo tài chính",
+    "Standard": "Chuẩn kế toán VN/IFRS",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "ROE",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo tài chính",
+    "Standard": "Chuẩn kế toán",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "NIM",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo tài chính",
+    "Standard": "—",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "CAR",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo rủi ro/SBV",
+    "Standard": "Basel II/III",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "NPL_Ratio",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo tài chính; SBV",
+    "Standard": "Basel",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "Loan_Growth",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo tài chính",
+    "Standard": "—",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "Green_Loan_Growth",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Báo cáo ngân hàng",
+    "Standard": "VN Green Taxonomy",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "Bank_Size",
+    "Type": "numeric",
+    "Unit": "tỷ VND",
+    "Source": "Báo cáo tài chính",
+    "Standard": "—",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "Z_Score",
+    "Type": "numeric",
+    "Unit": "điểm",
+    "Source": "Tính từ báo cáo tài chính",
+    "Standard": "Literature ngân hàng",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "Country_Risk_Index",
+    "Type": "numeric",
+    "Unit": "điểm",
+    "Source": "Nguồn vĩ mô (EIU/WTI)",
+    "Standard": "IFC/IMF",
+    "Update": "quý/năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "Local_Climate_Risk_Index",
+    "Type": "numeric",
+    "Unit": "điểm",
+    "Source": "WMO/NOAA/Copernicus",
+    "Standard": "IPCC risk framing",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Context",
+    "field": "Province_SDI",
+    "Type": "numeric",
+    "Unit": "điểm",
+    "Source": "TCTK/UNDP",
+    "Standard": "UN SDGs",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Report_Length_Pages",
+    "Type": "numeric",
+    "Unit": "trang",
+    "Source": "PDF báo cáo",
+    "Standard": "JIFMIM 2024; Scientific Data",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Readability_FOG",
+    "Type": "numeric",
+    "Unit": "điểm",
+    "Source": "Văn bản báo cáo",
+    "Standard": "JIFMIM 2024",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Readability_SMOG",
+    "Type": "numeric",
+    "Unit": "điểm",
+    "Source": "Văn bản báo cáo",
+    "Standard": "JIFMIM 2024",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Topic_Coverage_Env",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Văn bản báo cáo",
+    "Standard": "JIFMIM 2024",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Topic_Coverage_Social",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Văn bản báo cáo",
+    "Standard": "JIFMIM 2024",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Topic_Coverage_Governance",
+    "Type": "numeric",
+    "Unit": "%",
+    "Source": "Văn bản báo cáo",
+    "Standard": "JIFMIM 2024",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "KPI_Quantified_Count",
+    "Type": "numeric",
+    "Unit": "chỉ tiêu",
+    "Source": "Báo cáo ESG",
+    "Standard": "IFRS S1/S2; GRI",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Assurance_Mentioned",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Báo cáo ESG",
+    "Standard": "ISAE 3000",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Target_Setting_Presence",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Báo cáo ESG",
+    "Standard": "IFRS S2",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Strategy_Detail_Score",
+    "Type": "ordinal",
+    "Unit": "0–3",
+    "Source": "Báo cáo ESG",
+    "Standard": "IFRS S1/S2",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Sentiment_ESG_Section",
+    "Type": "numeric",
+    "Unit": "-1–1",
+    "Source": "Văn bản báo cáo",
+    "Standard": "NLP finance",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Citation_Of_Standards",
+    "Type": "numeric",
+    "Unit": "lần",
+    "Source": "Văn bản báo cáo",
+    "Standard": "—",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "SDG_Alignment_Mentions",
+    "Type": "numeric",
+    "Unit": "lần",
+    "Source": "Văn bản báo cáo",
+    "Standard": "UN SDGs",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "Materiality_Matrix_Presence",
+    "Type": "categorical",
+    "Unit": "0/1",
+    "Source": "Báo cáo ESG",
+    "Standard": "GRI",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Text",
+    "field": "ESG_Links_On_Web",
+    "Type": "numeric",
+    "Unit": "trang",
+    "Source": "Website ngân hàng",
+    "Standard": "—",
+    "Update": "quý"
+  },
+  {
+    "pillar": "Event",
+    "field": "NegNews_Count_Total",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "NegNews_Env",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "NegNews_Social",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "NegNews_Governance",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "Fines_Amount",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "Legal_Cases_Count",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "Whistleblower_Reports",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "Data_Breach_Incidents",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "Sanction_List_Hits",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "Climate_Disaster_Impacts",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "Product_Misconduct_Cases",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "Employee_Dispute_Cases",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "Community_Protest_Events",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "Media_Amplification_Index",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Event",
+    "field": "ESG_Claim_Rebuttals",
+    "Type": "numeric",
+    "Unit": "vụ/lần/điểm",
+    "Source": "NewsAPI/GDELT; cơ quan quản lý; mạng xã hội",
+    "Standard": "JIFMIM 2024 (ESG-washing); case greenwashing",
+    "Update": "tháng"
+  },
+  {
+    "pillar": "Meta",
+    "field": "Report_URL",
+    "Type": "string",
+    "Unit": "url",
+    "Source": "Website ngân hàng/sàn",
+    "Standard": "FAIR data",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Meta",
+    "field": "Report_Type",
+    "Type": "categorical",
+    "Unit": "enum",
+    "Source": "Website",
+    "Standard": "—",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Meta",
+    "field": "Assurance_Provider",
+    "Type": "string",
+    "Unit": "text",
+    "Source": "Báo cáo ESG",
+    "Standard": "ISAE 3000",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Meta",
+    "field": "Data_Boundary",
+    "Type": "string",
+    "Unit": "text",
+    "Source": "Báo cáo ESG",
+    "Standard": "IFRS S1/S2",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Meta",
+    "field": "Units_Notes",
+    "Type": "string",
+    "Unit": "text",
+    "Source": "Báo cáo ESG",
+    "Standard": "—",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Meta",
+    "field": "PCAF_Data_Quality",
+    "Type": "ordinal",
+    "Unit": "1–5",
+    "Source": "Ước lượng PCAF",
+    "Standard": "PCAF",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Meta",
+    "field": "Taxonomy_Criteria_Ref",
+    "Type": "string",
+    "Unit": "text",
+    "Source": "Báo cáo nội bộ; QĐ 21/2025",
+    "Standard": "VN Green Taxonomy 2025",
+    "Update": "năm"
+  },
+  {
+    "pillar": "Meta",
+    "field": "Disclosure_Language",
+    "Type": "categorical",
+    "Unit": "enum",
+    "Source": "Tập tin PDF",
+    "Standard": "—",
+    "Update": "năm"
+  },
+  {
+    "pillar": "G",
+    "field": "Independent_Directors_Pct",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "Annual report",
+    "Standard": "GRI 2-9; OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Board_Avg_Tenure",
+    "Type": "float",
+    "Unit": "years",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Board_Meetings_Count",
+    "Type": "int",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Board_Attendance_Pct",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "CEO_Duality",
+    "Type": "boolean",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "ESG_Expert_On_Board",
+    "Type": "boolean",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "IFRS S1 Governance",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Sustainability_Committee",
+    "Type": "boolean",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Risk_Committee",
+    "Type": "boolean",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "Basel; OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Executive_Pay_ESG_Link",
+    "Type": "boolean",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Anti_Corruption_Training_Coverage",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "ESG report",
+    "Standard": "GRI 205",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Confirmed_Corruption_Cases",
+    "Type": "int",
+    "Unit": "",
+    "Source": "Reports/news",
+    "Standard": "GRI 205",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Anti_Competitive_Cases",
+    "Type": "int",
+    "Unit": "",
+    "Source": "Reports/news",
+    "Standard": "GRI 206",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Tax_Transparency_Score",
+    "Type": "enum",
+    "Unit": "",
+    "Source": "ESG report",
+    "Standard": "GRI 207",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Related_Party_Disclosure",
+    "Type": "enum",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Big4_Auditor",
+    "Type": "boolean",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Audit_Opinion_Type",
+    "Type": "enum",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "ISA",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Financial_Restatement_Flag",
+    "Type": "boolean",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "IFRS",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Beneficial_Ownership_Disclosed",
+    "Type": "boolean",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Shareholder_Rights_Index",
+    "Type": "float",
+    "Unit": "0-1",
+    "Source": "Derived",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Top1_Shareholder_Ownership",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Foreign_Ownership_Pct",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "Annual report/Exchange",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "G",
+    "field": "Board_Skills_ESG_Fintech_Index",
+    "Type": "float",
+    "Unit": "0-1",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "GHG_Scope2_Location",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "ESG report",
+    "Standard": "IFRS S2; GRI 305",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "GHG_Scope2_Market",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "ESG report",
+    "Standard": "IFRS S2; GRI 305",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat1_PurchasedGoods",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat2_CapitalGoods",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat3_FuelEnergyUpstream",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat4_UpstreamTransport",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat5_Waste",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat6_BusinessTravel",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat7_EmployeeCommuting",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat8_LeasedAssetsUp",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat9_DownstreamTransport",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat10_ProcessingSoldProducts",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat11_UseOfSoldProducts",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat12_EndOfLife",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat13_LeasedAssetsDown",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat14_Franchises",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate",
+    "Standard": "GHG Protocol; PCAF (Cat15)",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "S3_Cat15_Investments",
+    "Type": "float",
+    "Unit": "tCO2e",
+    "Source": "Estimate/Financed emissions",
+    "Standard": "PCAF Global Standard",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "PCAF_Quality_Score",
+    "Type": "int",
+    "Unit": "",
+    "Source": "Estimate",
+    "Standard": "PCAF",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "Emission_Intensity_Assets",
+    "Type": "float",
+    "Unit": "tCO2e/bn VND",
+    "Source": "Derived",
+    "Standard": "IFRS S2",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "Energy_Consumption_Total",
+    "Type": "float",
+    "Unit": "MWh",
+    "Source": "ESG report",
+    "Standard": "GRI 302",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "Water_Withdrawal",
+    "Type": "float",
+    "Unit": "m3",
+    "Source": "ESG report",
+    "Standard": "GRI 303",
+    "Update": "annual"
+  },
+  {
+    "pillar": "E",
+    "field": "Environmental_Fines_Amount",
+    "Type": "float",
+    "Unit": "VND",
+    "Source": "Reports/news",
+    "Standard": "GRI 307",
+    "Update": "annual"
+  },
+  {
+    "pillar": "S",
+    "field": "LTIFR",
+    "Type": "float",
+    "Unit": "per 1m hours",
+    "Source": "ESG report",
+    "Standard": "GRI 403",
+    "Update": "annual"
+  },
+  {
+    "pillar": "S",
+    "field": "Whistleblower_Cases",
+    "Type": "int",
+    "Unit": "",
+    "Source": "Annual/ESG report",
+    "Standard": "GRI 2-26",
+    "Update": "annual"
+  },
+  {
+    "pillar": "S",
+    "field": "Grievance_Mechanism",
+    "Type": "boolean",
+    "Unit": "",
+    "Source": "ESG report",
+    "Standard": "GRI 2-25",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Context",
+    "field": "Total_Assets",
+    "Type": "float",
+    "Unit": "bn VND",
+    "Source": "FS",
+    "Standard": "Chuẩn kế toán VN/IFRS",
+    "Update": "quarterly"
+  },
+  {
+    "pillar": "Context",
+    "field": "Total_Loans",
+    "Type": "float",
+    "Unit": "bn VND",
+    "Source": "FS",
+    "Standard": "Chuẩn kế toán VN/IFRS",
+    "Update": "quarterly"
+  },
+  {
+    "pillar": "Context",
+    "field": "Deposits",
+    "Type": "float",
+    "Unit": "bn VND",
+    "Source": "FS",
+    "Standard": "Chuẩn kế toán VN/IFRS",
+    "Update": "quarterly"
+  },
+  {
+    "pillar": "Context",
+    "field": "Equity",
+    "Type": "float",
+    "Unit": "bn VND",
+    "Source": "FS",
+    "Standard": "Chuẩn kế toán VN/IFRS",
+    "Update": "quarterly"
+  },
+  {
+    "pillar": "Context",
+    "field": "Net_Income",
+    "Type": "float",
+    "Unit": "bn VND",
+    "Source": "FS",
+    "Standard": "Chuẩn kế toán VN/IFRS",
+    "Update": "quarterly"
+  },
+  {
+    "pillar": "Context",
+    "field": "CET1_Ratio",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "Regulatory",
+    "Standard": "Basel III",
+    "Update": "quarterly"
+  },
+  {
+    "pillar": "Context",
+    "field": "LCR",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "Regulatory",
+    "Standard": "Basel III",
+    "Update": "quarterly"
+  },
+  {
+    "pillar": "Context",
+    "field": "NSFR",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "Regulatory",
+    "Standard": "Basel III",
+    "Update": "quarterly"
+  },
+  {
+    "pillar": "Context",
+    "field": "Cost_to_Income",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "Derived",
+    "Standard": "—",
+    "Update": "quarterly"
+  },
+  {
+    "pillar": "Context",
+    "field": "Green_Loan_Balance",
+    "Type": "float",
+    "Unit": "bn VND",
+    "Source": "ESG report/Taxonomy",
+    "Standard": "VN Green Taxonomy 2025",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "report_type",
+    "Type": "enum",
+    "Unit": "",
+    "Source": "Reports",
+    "Standard": "GRI",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "report_language",
+    "Type": "enum",
+    "Unit": "",
+    "Source": "Reports",
+    "Standard": "—",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "report_url",
+    "Type": "string",
+    "Unit": "",
+    "Source": "Reports",
+    "Standard": "FAIR data",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "report_pages",
+    "Type": "int",
+    "Unit": "",
+    "Source": "Reports",
+    "Standard": "—",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "readability_fog",
+    "Type": "float",
+    "Unit": "",
+    "Source": "Derived",
+    "Standard": "—",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "readability_smog",
+    "Type": "float",
+    "Unit": "",
+    "Source": "Derived",
+    "Standard": "—",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "topic_env_pct",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "NLP",
+    "Standard": "GRI themes",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "topic_social_pct",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "NLP",
+    "Standard": "GRI themes",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "topic_gov_pct",
+    "Type": "float",
+    "Unit": "%",
+    "Source": "NLP",
+    "Standard": "GRI themes",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "kpi_quantified_count",
+    "Type": "int",
+    "Unit": "",
+    "Source": "NLP/manual",
+    "Standard": "IFRS S1/S2",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "assurance_flag",
+    "Type": "boolean",
+    "Unit": "",
+    "Source": "Report",
+    "Standard": "ISAE 3000",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "assurance_provider",
+    "Type": "string",
+    "Unit": "",
+    "Source": "Report",
+    "Standard": "ISAE 3000",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "assurance_scope",
+    "Type": "enum",
+    "Unit": "",
+    "Source": "Report",
+    "Standard": "ISAE 3000",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "strategy_detail_score",
+    "Type": "int",
+    "Unit": "",
+    "Source": "Rule-based",
+    "Standard": "—",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "disclosure_timeliness_days",
+    "Type": "int",
+    "Unit": "days",
+    "Source": "Report",
+    "Standard": "—",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Text",
+    "field": "publication_date",
+    "Type": "date",
+    "Unit": "",
+    "Source": "Report",
+    "Standard": "—",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Events",
+    "field": "event_date",
+    "Type": "date",
+    "Unit": "",
+    "Source": "News/Regulator",
+    "Standard": "—",
+    "Update": "event-driven"
+  },
+  {
+    "pillar": "Events",
+    "field": "event_category",
+    "Type": "enum",
+    "Unit": "",
+    "Source": "Classifier",
+    "Standard": "—",
+    "Update": "event-driven"
+  },
+  {
+    "pillar": "Events",
+    "field": "event_subtype",
+    "Type": "string",
+    "Unit": "",
+    "Source": "Classifier",
+    "Standard": "—",
+    "Update": "event-driven"
+  },
+  {
+    "pillar": "Events",
+    "field": "severity",
+    "Type": "int",
+    "Unit": "",
+    "Source": "Rule",
+    "Standard": "—",
+    "Update": "event-driven"
+  },
+  {
+    "pillar": "Events",
+    "field": "jurisdiction",
+    "Type": "string",
+    "Unit": "",
+    "Source": "News/Regulator",
+    "Standard": "—",
+    "Update": "event-driven"
+  },
+  {
+    "pillar": "Events",
+    "field": "monetary_fine_amount",
+    "Type": "float",
+    "Unit": "VND",
+    "Source": "Regulator",
+    "Standard": "—",
+    "Update": "event-driven"
+  },
+  {
+    "pillar": "Events",
+    "field": "source_url",
+    "Type": "string",
+    "Unit": "",
+    "Source": "News/Regulator",
+    "Standard": "—",
+    "Update": "event-driven"
+  },
+  {
+    "pillar": "Events",
+    "field": "description_short",
+    "Type": "string",
+    "Unit": "",
+    "Source": "Derived",
+    "Standard": "—",
+    "Update": "event-driven"
+  },
+  {
+    "pillar": "Events",
+    "field": "sentiment_score",
+    "Type": "float",
+    "Unit": "",
+    "Source": "NLP",
+    "Standard": "—",
+    "Update": "event-driven"
+  },
+  {
+    "pillar": "Graph",
+    "field": "board_degree",
+    "Type": "int",
+    "Unit": "",
+    "Source": "Annual report",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Graph",
+    "field": "board_eigenvector_centrality",
+    "Type": "float",
+    "Unit": "0-1",
+    "Source": "Derived",
+    "Standard": "—",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Graph",
+    "field": "peer_avg_esg_lag1",
+    "Type": "float",
+    "Unit": "0-100",
+    "Source": "Derived",
+    "Standard": "—",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Graph",
+    "field": "common_owner_degree",
+    "Type": "int",
+    "Unit": "",
+    "Source": "Annual/Exchange",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Graph",
+    "field": "foreign_investor_pressure",
+    "Type": "boolean",
+    "Unit": "",
+    "Source": "Reports",
+    "Standard": "OECD 2023",
+    "Update": "annual"
+  },
+  {
+    "pillar": "Graph",
+    "field": "news_comention_degree",
+    "Type": "int",
+    "Unit": "",
+    "Source": "News graph",
+    "Standard": "—",
+    "Update": "annual"
+  }
+]

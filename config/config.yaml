@@ -1,0 +1,44 @@
+# Global configuration
+data_dir: data
+out_dir: outputs
+log_level: INFO
+
+pdf:
+  prefer_text: true
+  ocr:
+    enabled: true
+    lang: vie+eng   # install traineddata if needed
+    dpi: 300
+  tables:
+    engine: camelot  # camelot or lattice
+    flavor: lattice
+    edge_tol: 500
+
+extraction:
+  strategy_priority: [heuristic, llm]
+  min_confidence: 0.6
+  llm:
+    provider: openai   # openai|ollama|none
+    openai_model: gpt-4o-mini
+    ollama_model: qwen2.5:7b-instruct
+    temperature: 0.0
+    max_tokens: 1600
+    api_base: null  # set if using a gateway
+    api_key_env: OPENAI_API_KEY
+
+mapping:
+  fuzzy_threshold: 87
+  unit_normalization: true
+
+quality:
+  accept_min_confidence: 0.55
+
+modeling:
+  target: ROA
+  algorithms: [xgboost]
+  test_size: 0.2
+  random_state: 42
+
+serving:
+  host: 0.0.0.0
+  port: 8900

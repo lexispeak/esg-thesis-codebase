@@ -1,0 +1,222 @@
+pillar,field,Type,Unit,Source,Standard,Update
+E,GHG_Scope1,numeric,tCO₂e,Báo cáo ESG/Thường niên,IFRS S2; GRI 305,năm
+E,GHG_Scope2,numeric,tCO₂e,Báo cáo ESG/Thường niên,IFRS S2; GRI 305,năm
+E,GHG_Scope3_Total,numeric,tCO₂e,Báo cáo ESG; ước lượng,IFRS S2; GHG Protocol,năm
+E,Scope3_Cat1_PurchasedGoods,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat2_CapitalGoods,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat3_FuelEnergyUpstream,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat4_UpstreamTransport,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat5_Waste,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat6_BusinessTravel,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat7_EmployeeCommuting,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat8_LeasedAssetsUp,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat9_DownstreamTransport,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat10_ProcessingSoldProducts,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat11_UseOfSoldProducts,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat12_EndOfLife,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat13_LeasedAssetsDown,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat14_Franchises,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Scope3_Cat15_Investments,numeric,tCO₂e,Báo cáo ESG; ước lượng,GHG Protocol; PCAF (Cat15),năm
+E,Financed_Emissions_Total,numeric,tCO₂e,Ước lượng theo PCAF từ dư nợ theo ngành,PCAF Global Standard,năm/quý
+E,Financed_Emissions_Energy,numeric,tCO₂e,Dư nợ theo ngành + hệ số phát thải,PCAF; IPCC factors,năm/quý
+E,Financed_Emissions_Utilities,numeric,tCO₂e,Dư nợ theo ngành + hệ số phát thải,PCAF; IPCC factors,năm/quý
+E,Financed_Emissions_Cement,numeric,tCO₂e,Dư nợ theo ngành + hệ số phát thải,PCAF; IPCC factors,năm/quý
+E,Financed_Emissions_Steel,numeric,tCO₂e,Dư nợ theo ngành + hệ số phát thải,PCAF; IPCC factors,năm/quý
+E,Financed_Emissions_Chemicals,numeric,tCO₂e,Dư nợ theo ngành + hệ số phát thải,PCAF; IPCC factors,năm/quý
+E,Financed_Emissions_RealEstate,numeric,tCO₂e,Dư nợ theo ngành + hệ số phát thải,PCAF; IPCC factors,năm/quý
+E,Financed_Emissions_Transport,numeric,tCO₂e,Dư nợ theo ngành + hệ số phát thải,PCAF; IPCC factors,năm/quý
+E,Financed_Emissions_Agriculture,numeric,tCO₂e,Dư nợ theo ngành + hệ số phát thải,PCAF; IPCC factors,năm/quý
+E,Financed_Emissions_Manufacturing,numeric,tCO₂e,Dư nợ theo ngành + hệ số phát thải,PCAF; IPCC factors,năm/quý
+E,Green_Credit_Ratio,numeric,%,Báo cáo ngân hàng; SBV,VN Green Taxonomy 2025,quý/năm
+E,Taxonomy_Alignment_Ratio,numeric,%,Báo cáo nội bộ/ngân hàng,VN Green Taxonomy 2025,năm
+E,Energy_Consumption,numeric,kWh,Báo cáo ESG,GRI 302,năm/quý
+E,Renewable_Energy_Share,numeric,%,Báo cáo ESG,GRI 302,năm
+E,Water_Consumption,numeric,m³,Báo cáo ESG,GRI 303,năm
+E,Waste_Generated,numeric,tấn,Báo cáo ESG,GRI 306,năm
+E,Paper_Consumption,numeric,kg,Báo cáo ESG,GRI 301,năm
+E,Env_Violations_Cases,numeric,vụ,Tin tức; cơ quan nhà nước,GRI 307,tháng/quý
+S,Female_Board_Ratio,numeric,%,Báo cáo quản trị,GRI 405; OECD 2023,năm
+S,Board_Diversity_Index,numeric,0–1,Báo cáo quản trị; website,GRI 405; OECD 2023,năm
+S,Executives_Female_Ratio,numeric,%,Báo cáo quản trị,GRI 405,năm
+S,Median_Gender_Pay_Gap,numeric,%,Báo cáo nhân sự,GRI 405-2,năm
+S,Employee_Count,numeric,người,Báo cáo nhân sự,GRI 2-7,năm/quý
+S,Employee_Turnover,numeric,%,Báo cáo nhân sự,GRI 401,năm
+S,Training_Hours_Avg,numeric,giờ,Báo cáo ESG,GRI 404,năm
+S,Training_Coverage,numeric,%,Báo cáo ESG,GRI 404,năm
+S,HSE_Accidents,numeric,vụ,Báo cáo ESG; tin tức,GRI 403,quý/năm
+S,Union_Coverage,numeric,%,Báo cáo nhân sự,GRI 407,năm
+S,Remote_Work_Share,numeric,%,Báo cáo nhân sự/ESG,GRI 401,năm
+S,Inclusive_Finance_Programs,numeric,chương trình,Báo cáo CSR; website,GRI 203,năm/quý
+S,SME_Loans_Ratio,numeric,%,Báo cáo tín dụng; SBV,GRI 203,quý/năm
+S,Customer_Complaints,numeric,vụ,Báo cáo dịch vụ KH; Cục QLCT,GRI 418,quý
+S,Customer_Data_Breaches,numeric,vụ,Tin tức; công bố ngân hàng,GRI 418,tháng/quý
+S,Accessibility_Score,numeric,0–1,Website; khảo sát,UN SDGs; GRI 203,năm
+S,Community_Investment,numeric,tỷ VND,Báo cáo CSR/ESG,GRI 413,năm
+S,Volunteer_Hours,numeric,giờ,Báo cáo CSR/ESG,GRI 413,năm
+S,Social_Controversies_Count,numeric,vụ,Tin tức (GDELT/NewsAPI),JIFMIM 2024 (ESG-washing); GRI 2-21,tháng
+S,Human_Rights_Policy,categorical,0/1,Website; báo cáo,GRI 412,năm
+S,Supplier_Screening_ESG,numeric,%,Báo cáo bền vững,GRI 308/414,năm
+S,Employee_Wellbeing_Programs,numeric,chương trình,Báo cáo nhân sự,GRI 403/401,năm
+S,Training_ESG_Specific,numeric,giờ,Báo cáo ESG; nội bộ,IFRS S2 (năng lực quản trị rủi ro khí hậu),năm
+S,Diversity_Disclosure_Granularity,ordinal,0–3,Báo cáo quản trị,GRI 405,năm
+S,Customer_Satisfaction_Index,numeric,0–100,Báo cáo dịch vụ,GRI 418,năm/quý
+S,Financial_Literacy_Programs,numeric,chương trình,CSR/ESG,GRI 203,năm
+G,Board_Size,numeric,người,Báo cáo quản trị,OECD 2023,năm
+G,Board_Independence_Ratio,numeric,%,Báo cáo quản trị,OECD 2023; GRI 2-9,năm
+G,Board_Chair_CEO_Duality,categorical,0/1,Báo cáo quản trị,OECD 2023,năm
+G,Avg_Board_Tenure,numeric,năm,Báo cáo quản trị,OECD 2023,năm
+G,Board_Age_Avg,numeric,tuổi,Báo cáo quản trị,OECD 2023,năm
+G,Risk_Committee_Existence,categorical,0/1,Báo cáo quản trị,IFRS S1/S2,năm
+G,Audit_Committee_Independence,numeric,0–1,Báo cáo quản trị,OECD 2023,năm
+G,ESG_Policies_Count,numeric,tài liệu,Website ngân hàng,IFRS S1/S2; GRI 2,quý
+G,NetZero_Target_Exist,categorical,0/1,Website; báo cáo,SBTi/Net-Zero Standard,năm
+G,TCFD_Alignment_Level,ordinal,0–3,Báo cáo ESG,IFRS S1/S2,năm
+G,Scenario_Analysis_Disclosed,categorical,0/1,Báo cáo ESG,IFRS S2,năm
+G,Stress_Test_Climate,categorical,0/1,Báo cáo rủi ro,IFRS S2,năm
+G,ThirdParty_Assurance_ESG,categorical,0/1,Báo cáo ESG,ISAE 3000; GRI 2-5,năm
+G,Disclosure_Quality_Score,numeric,0–100,Báo cáo ESG,JIFMIM 2024; IFRS S1/S2,năm/quý
+G,ESG_Washing_Index,numeric,0–1,Báo cáo ESG + tin tức,JIFMIM 2024 (ESG-washing),quý
+G,Exec_Comp_Disclosure,categorical,0/1,Báo cáo thường niên,GRI 2-19/2-20,năm
+G,Anti_Corruption_Cases,numeric,vụ,Tin tức; cơ quan nhà nước,GRI 205,tháng
+G,Shareholder_Rights_Score,numeric,0–1,Điều lệ; quy chế,OECD 2023,năm
+G,Whistleblowing_Channel,categorical,0/1,Website; báo cáo,OECD; GRI 2-26,năm
+G,Data_Privacy_Governance,ordinal,0–2,Báo cáo; chính sách,GRI 418,năm
+G,Board_ESG_Expertise_Ratio,numeric,%,Hồ sơ HĐQT,OECD 2023,năm
+Context,ROA,numeric,%,Báo cáo tài chính,Chuẩn kế toán VN/IFRS,quý/năm
+Context,ROE,numeric,%,Báo cáo tài chính,Chuẩn kế toán,quý/năm
+Context,NIM,numeric,%,Báo cáo tài chính,—,quý/năm
+Context,CAR,numeric,%,Báo cáo rủi ro/SBV,Basel II/III,quý/năm
+Context,NPL_Ratio,numeric,%,Báo cáo tài chính; SBV,Basel,quý/năm
+Context,Loan_Growth,numeric,%,Báo cáo tài chính,—,quý/năm
+Context,Green_Loan_Growth,numeric,%,Báo cáo ngân hàng,VN Green Taxonomy,quý/năm
+Context,Bank_Size,numeric,tỷ VND,Báo cáo tài chính,—,quý/năm
+Context,Z_Score,numeric,điểm,Tính từ báo cáo tài chính,Literature ngân hàng,năm
+Context,Country_Risk_Index,numeric,điểm,Nguồn vĩ mô (EIU/WTI),IFC/IMF,quý/năm
+Context,Local_Climate_Risk_Index,numeric,điểm,WMO/NOAA/Copernicus,IPCC risk framing,năm
+Context,Province_SDI,numeric,điểm,TCTK/UNDP,UN SDGs,năm
+Text,Report_Length_Pages,numeric,trang,PDF báo cáo,JIFMIM 2024; Scientific Data,năm
+Text,Readability_FOG,numeric,điểm,Văn bản báo cáo,JIFMIM 2024,năm
+Text,Readability_SMOG,numeric,điểm,Văn bản báo cáo,JIFMIM 2024,năm
+Text,Topic_Coverage_Env,numeric,%,Văn bản báo cáo,JIFMIM 2024,năm
+Text,Topic_Coverage_Social,numeric,%,Văn bản báo cáo,JIFMIM 2024,năm
+Text,Topic_Coverage_Governance,numeric,%,Văn bản báo cáo,JIFMIM 2024,năm
+Text,KPI_Quantified_Count,numeric,chỉ tiêu,Báo cáo ESG,IFRS S1/S2; GRI,năm
+Text,Assurance_Mentioned,categorical,0/1,Báo cáo ESG,ISAE 3000,năm
+Text,Target_Setting_Presence,categorical,0/1,Báo cáo ESG,IFRS S2,năm
+Text,Strategy_Detail_Score,ordinal,0–3,Báo cáo ESG,IFRS S1/S2,năm
+Text,Sentiment_ESG_Section,numeric,-1–1,Văn bản báo cáo,NLP finance,năm
+Text,Citation_Of_Standards,numeric,lần,Văn bản báo cáo,—,năm
+Text,SDG_Alignment_Mentions,numeric,lần,Văn bản báo cáo,UN SDGs,năm
+Text,Materiality_Matrix_Presence,categorical,0/1,Báo cáo ESG,GRI,năm
+Text,ESG_Links_On_Web,numeric,trang,Website ngân hàng,—,quý
+Event,NegNews_Count_Total,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,NegNews_Env,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,NegNews_Social,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,NegNews_Governance,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,Fines_Amount,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,Legal_Cases_Count,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,Whistleblower_Reports,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,Data_Breach_Incidents,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,Sanction_List_Hits,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,Climate_Disaster_Impacts,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,Product_Misconduct_Cases,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,Employee_Dispute_Cases,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,Community_Protest_Events,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,Media_Amplification_Index,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Event,ESG_Claim_Rebuttals,numeric,vụ/lần/điểm,NewsAPI/GDELT; cơ quan quản lý; mạng xã hội,JIFMIM 2024 (ESG-washing); case greenwashing,tháng
+Meta,Report_URL,string,url,Website ngân hàng/sàn,FAIR data,năm
+Meta,Report_Type,categorical,enum,Website,—,năm
+Meta,Assurance_Provider,string,text,Báo cáo ESG,ISAE 3000,năm
+Meta,Data_Boundary,string,text,Báo cáo ESG,IFRS S1/S2,năm
+Meta,Units_Notes,string,text,Báo cáo ESG,—,năm
+Meta,PCAF_Data_Quality,ordinal,1–5,Ước lượng PCAF,PCAF,năm
+Meta,Taxonomy_Criteria_Ref,string,text,Báo cáo nội bộ; QĐ 21/2025,VN Green Taxonomy 2025,năm
+Meta,Disclosure_Language,categorical,enum,Tập tin PDF,—,năm
+G,Independent_Directors_Pct,float,%,Annual report,GRI 2-9; OECD 2023,annual
+G,Board_Avg_Tenure,float,years,Annual report,OECD 2023,annual
+G,Board_Meetings_Count,int,,Annual report,OECD 2023,annual
+G,Board_Attendance_Pct,float,%,Annual report,OECD 2023,annual
+G,CEO_Duality,boolean,,Annual report,OECD 2023,annual
+G,ESG_Expert_On_Board,boolean,,Annual report,IFRS S1 Governance,annual
+G,Sustainability_Committee,boolean,,Annual report,OECD 2023,annual
+G,Risk_Committee,boolean,,Annual report,Basel; OECD 2023,annual
+G,Executive_Pay_ESG_Link,boolean,,Annual report,OECD 2023,annual
+G,Anti_Corruption_Training_Coverage,float,%,ESG report,GRI 205,annual
+G,Confirmed_Corruption_Cases,int,,Reports/news,GRI 205,annual
+G,Anti_Competitive_Cases,int,,Reports/news,GRI 206,annual
+G,Tax_Transparency_Score,enum,,ESG report,GRI 207,annual
+G,Related_Party_Disclosure,enum,,Annual report,OECD 2023,annual
+G,Big4_Auditor,boolean,,Annual report,OECD 2023,annual
+G,Audit_Opinion_Type,enum,,Annual report,ISA,annual
+G,Financial_Restatement_Flag,boolean,,Annual report,IFRS,annual
+G,Beneficial_Ownership_Disclosed,boolean,,Annual report,OECD 2023,annual
+G,Shareholder_Rights_Index,float,0-1,Derived,OECD 2023,annual
+G,Top1_Shareholder_Ownership,float,%,Annual report,OECD 2023,annual
+G,Foreign_Ownership_Pct,float,%,Annual report/Exchange,OECD 2023,annual
+G,Board_Skills_ESG_Fintech_Index,float,0-1,Annual report,OECD 2023,annual
+E,GHG_Scope2_Location,float,tCO2e,ESG report,IFRS S2; GRI 305,annual
+E,GHG_Scope2_Market,float,tCO2e,ESG report,IFRS S2; GRI 305,annual
+E,S3_Cat1_PurchasedGoods,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat2_CapitalGoods,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat3_FuelEnergyUpstream,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat4_UpstreamTransport,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat5_Waste,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat6_BusinessTravel,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat7_EmployeeCommuting,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat8_LeasedAssetsUp,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat9_DownstreamTransport,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat10_ProcessingSoldProducts,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat11_UseOfSoldProducts,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat12_EndOfLife,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat13_LeasedAssetsDown,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat14_Franchises,float,tCO2e,Estimate,GHG Protocol; PCAF (Cat15),annual
+E,S3_Cat15_Investments,float,tCO2e,Estimate/Financed emissions,PCAF Global Standard,annual
+E,PCAF_Quality_Score,int,,Estimate,PCAF,annual
+E,Emission_Intensity_Assets,float,tCO2e/bn VND,Derived,IFRS S2,annual
+E,Energy_Consumption_Total,float,MWh,ESG report,GRI 302,annual
+E,Water_Withdrawal,float,m3,ESG report,GRI 303,annual
+E,Environmental_Fines_Amount,float,VND,Reports/news,GRI 307,annual
+S,LTIFR,float,per 1m hours,ESG report,GRI 403,annual
+S,Whistleblower_Cases,int,,Annual/ESG report,GRI 2-26,annual
+S,Grievance_Mechanism,boolean,,ESG report,GRI 2-25,annual
+Context,Total_Assets,float,bn VND,FS,Chuẩn kế toán VN/IFRS,quarterly
+Context,Total_Loans,float,bn VND,FS,Chuẩn kế toán VN/IFRS,quarterly
+Context,Deposits,float,bn VND,FS,Chuẩn kế toán VN/IFRS,quarterly
+Context,Equity,float,bn VND,FS,Chuẩn kế toán VN/IFRS,quarterly
+Context,Net_Income,float,bn VND,FS,Chuẩn kế toán VN/IFRS,quarterly
+Context,CET1_Ratio,float,%,Regulatory,Basel III,quarterly
+Context,LCR,float,%,Regulatory,Basel III,quarterly
+Context,NSFR,float,%,Regulatory,Basel III,quarterly
+Context,Cost_to_Income,float,%,Derived,—,quarterly
+Context,Green_Loan_Balance,float,bn VND,ESG report/Taxonomy,VN Green Taxonomy 2025,annual
+Text,report_type,enum,,Reports,GRI,annual
+Text,report_language,enum,,Reports,—,annual
+Text,report_url,string,,Reports,FAIR data,annual
+Text,report_pages,int,,Reports,—,annual
+Text,readability_fog,float,,Derived,—,annual
+Text,readability_smog,float,,Derived,—,annual
+Text,topic_env_pct,float,%,NLP,GRI themes,annual
+Text,topic_social_pct,float,%,NLP,GRI themes,annual
+Text,topic_gov_pct,float,%,NLP,GRI themes,annual
+Text,kpi_quantified_count,int,,NLP/manual,IFRS S1/S2,annual
+Text,assurance_flag,boolean,,Report,ISAE 3000,annual
+Text,assurance_provider,string,,Report,ISAE 3000,annual
+Text,assurance_scope,enum,,Report,ISAE 3000,annual
+Text,strategy_detail_score,int,,Rule-based,—,annual
+Text,disclosure_timeliness_days,int,days,Report,—,annual
+Text,publication_date,date,,Report,—,annual
+Events,event_date,date,,News/Regulator,—,event-driven
+Events,event_category,enum,,Classifier,—,event-driven
+Events,event_subtype,string,,Classifier,—,event-driven
+Events,severity,int,,Rule,—,event-driven
+Events,jurisdiction,string,,News/Regulator,—,event-driven
+Events,monetary_fine_amount,float,VND,Regulator,—,event-driven
+Events,source_url,string,,News/Regulator,—,event-driven
+Events,description_short,string,,Derived,—,event-driven
+Events,sentiment_score,float,,NLP,—,event-driven
+Graph,board_degree,int,,Annual report,OECD 2023,annual
+Graph,board_eigenvector_centrality,float,0-1,Derived,—,annual
+Graph,peer_avg_esg_lag1,float,0-100,Derived,—,annual
+Graph,common_owner_degree,int,,Annual/Exchange,OECD 2023,annual
+Graph,foreign_investor_pressure,boolean,,Reports,OECD 2023,annual
+Graph,news_comention_degree,int,,News graph,—,annual

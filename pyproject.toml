@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "esg-thesis"
+version = "0.1.0"
+authors = [{name="Thinh Pham Quang"}]
+description = "End-to-end ESG extraction and XAI for Vietnamese banks"
+readme = "README.md"
+requires-python = ">=3.10"
