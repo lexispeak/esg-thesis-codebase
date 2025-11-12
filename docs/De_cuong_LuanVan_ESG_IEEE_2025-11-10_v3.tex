@@ -1,0 +1,118 @@
+
+% !TEX TS-program = xelatex
+\documentclass[conference]{IEEEtran}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{vietnamese}
+\setotherlanguage{english}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Consolas}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{siunitx}
+\sisetup{detect-all=true}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\title{{Tích hợp ESG trong Ngân hàng Việt Nam: Rủi ro, Dự đoán Hiệu năng và Giải thích Mô hình bằng SHAP}}
+
+\author{
+\IEEEauthorblockN{{Phạm Quang Thịnh (Leo)}}
+\IEEEauthorblockA{{Khoa học Máy tính, Trường đại học Công Nghệ Nghệ- Đại học Quốc gia Hà Nội}\\
+Email: 23035092@vnu.edu.vn}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Đề cương trọng tâm: (i) \textit{ESG risk assessment} và (ii) \textit{ESG performance prediction} trong bối cảnh tích hợp ESG của ngành ngân hàng Việt Nam. Phương pháp ưu tiên gồm học không giám sát cho phân cụm/phát hiện bất thường rủi ro, XGBoost cho chấm điểm ESG, NLP cho phân tích mức độ/chất lượng công bố, và SHAP để giải thích mô hình. Dữ liệu đến từ công bố theo quy định tại Việt Nam, báo cáo thường niên của ngân hàng và hồ sơ niêm yết (HOSE/HNX/UPCoM). Đóng góp hướng tới chuẩn mực bậc Thạc sĩ, có tiềm năng mở rộng nghiên cứu thực nghiệm cho bậc Tiến sĩ với dữ liệu Việt Nam.
+\end{abstract}
+
+\begin{IEEEkeywords}
+ESG, ngân hàng, rủi ro ESG, dự đoán hiệu năng, XGBoost, NLP, SHAP, học không giám sát, Việt Nam.
+\end{IEEEkeywords}
+
+\section{Mở đầu}
+Các tổ chức tín dụng tại Việt Nam đối mặt nhu cầu tích hợp ESG vào quản trị rủi ro, công bố thông tin và đánh giá hiệu năng bền vững. Dữ liệu phân tán (báo cáo, phụ lục niêm yết, tài liệu theo quy định) và không đồng nhất làm tăng chi phí tuân thủ và phân tích. Nghiên cứu đặt mục tiêu xây dựng khung phân tích thực chứng, kết hợp pipeline dữ liệu với mô hình có khả năng giải thích.
+
+\section{Định hướng nghiên cứu \& Mục tiêu}
+\subsection{Research Focus \& Objectives}
+\begin{itemize}
+    \item \textbf{ESG risk assessment}: đo lường/phân khúc rủi ro ESG và phát hiện điểm bất thường liên quan E/S/G.
+    \item \textbf{ESG performance prediction}: dự đoán điểm hiệu năng/điểm ESG và/hoặc điểm chất lượng công bố.
+\end{itemize}
+
+\subsection{Methodological Preference}
+\begin{itemize}
+    \item \textbf{Unsupervised}: phân cụm, phát hiện bất thường, chấm điểm rủi ro không giám sát.
+    \item \textbf{XGBoost} cho \textit{ESG scoring} (giám sát) trên dữ liệu bảng.
+    \item \textbf{NLP} cho \textit{disclosure analysis} (mức độ/chất lượng công bố, căn chỉnh IFRS/GRI/TCFD).
+    \item \textbf{SHAP} cho giải thích mô hình (global/local) và kiểm tra độ ổn định đặc trưng.
+\end{itemize}
+
+\subsection{Banking Context Scope}
+\textbf{Overall ESG integration}: kết nối E/S/G vào khung quản trị ngân hàng (ưu tiên Governance), liên kết với chỉ số tài chính ngữ cảnh.
+
+\subsection{Data Sources \& Availability}
+\textbf{Vietnamese regulatory disclosures}, \textbf{bank annual reports}, \textbf{stock exchange filings} (HOSE/HNX/UPCoM).
+
+\subsection{Academic Depth \& Contribution}
+Phù hợp chuẩn \textbf{Master's}; mở rộng hướng \textbf{PhD} thông qua phân tích thực nghiệm quy mô lớn trên dữ liệu Việt Nam, tái lập kết quả.
+
+\section{Phương pháp \& Kiến trúc}
+\subsection{Pipeline dữ liệu}
+Ingest tài liệu (trình thu thập web/niêm yết), trích xuất text/layout/OCR, chuẩn hoá/ánh xạ schema, kiểm soát chất lượng, sinh đặc trưng (bảng + văn bản), lưu \textit{feature store}.
+
+\subsection{Phân tích không giám sát}
+Phân cụm ngân hàng theo đặc trưng ESG; phát hiện bất thường (ví dụ: công bố đột biến, thiếu nhất quán); sinh \textit{risk index} không giám sát.
+
+\subsection{Chấm điểm \& dự đoán (giám sát)}
+Huấn luyện \textbf{XGBoost} cho \textit{ESG scoring} / \textit{quality of disclosure}; hiệu chỉnh siêu tham số; đánh giá chéo.
+
+\subsection{NLP cho công bố thông tin}
+Phân lớp đoạn văn theo E/S/G; trích chỉ số định lượng; đo \textit{disclosure quality/coverage}; liên kết chuẩn IFRS~S1/S2, GRI~2021, TCFD.
+
+\subsection{Giải thích mô hình (SHAP)}
+Báo cáo SHAP tổng quan và theo ngân hàng/nhóm chỉ tiêu; kiểm tra ổn định đặc trưng giữa các fold.
+
+\section{Dữ liệu \& Schema}
+\subsection{Nguồn dữ liệu}
+Công bố theo quy định (thông tư, tài liệu công khai), báo cáo thường niên/ESG/Quản trị, hồ sơ niêm yết sàn (HOSE/HNX/UPCoM).
+
+\subsection{Schema (rút gọn) và mở rộng}
+Bộ trường tích hợp E/S/G (ưu tiên G) và ngữ cảnh tài chính; bộ đầy đủ vượt 150 trường; tài liệu hoá đơn vị, nguồn, quy tắc chuẩn hoá.
+
+\section{Thiết kế thực nghiệm}
+\subsection{Bài toán không giám sát}
+Đánh giá tính tách biệt cụm (ví dụ Silhouette), nhận diện bất thường có ý nghĩa nghiệp vụ; đối chiếu với tin tức/sự kiện.
+
+\subsection{Bài toán giám sát}
+Đánh giá dự đoán điểm ESG/Disclosure: MAE/RMSE/AUC (tuỳ biến); báo cáo SHAP; so sánh biến thể đặc trưng.
+
+\subsection{Phân tích công bố (NLP)}
+Đo coverage/consistency, chỉ số chất lượng công bố; kiểm định khác biệt theo năm/ngân hàng.
+
+\section{Đạo đức, Tuân thủ \& Tái lập}
+Tôn trọng bản quyền; chỉ dùng nguồn công khai; công bố quy trình/mã cần thiết để tái lập (trừ dữ liệu hạn chế quyền).
+
+\section{Kết luận}
+Khung đề cương đặt nền cho đánh giá rủi ro và dự đoán hiệu năng ESG theo chuẩn quốc tế, thích ứng bối cảnh Việt Nam, với nhấn mạnh giải thích mô hình (SHAP) và tiềm năng mở rộng ở mức PhD.
+
+\begin{thebibliography}{00}
+\bibitem{ifrsS1} IFRS Foundation, ``IFRS S1: General Requirements for Disclosure of Sustainability-related Financial Information,'' 2023.
+\bibitem{ifrsS2} IFRS Foundation, ``IFRS S2: Climate-related Disclosures,'' 2023.
+\bibitem{gri2021} Global Reporting Initiative, ``GRI Standards 2021,'' 2021.
+\bibitem{oecd2023} OECD, ``G20/OECD Principles of Corporate Governance,'' 2023.
+\bibitem{pcaf} Partnership for Carbon Accounting Financials (PCAF), ``Global GHG Accounting and Reporting Standard for the Financial Industry,'' 2023.
+\end{thebibliography}
+
+\end{document}
