@@ -58,6 +58,15 @@ Edit `data/banks.csv` with **real** bank names, report URLs, and year. Example r
 python cli/main.py ingest --config config/config.yaml
 python cli/main.py extract --config config/config.yaml --strategy heuristic
 python cli/main.py extract --config config/config.yaml --strategy llm     # optional
+# example using pip in venv
+pip install -r requirements.txt
+# ensure needed extras
+pip install tenacity httpx playwright pymupdf tqdm python-slugify rapidfuzz
+# install Playwright browsers (bắt buộc nếu dùng Playwright crawling)
+python -m playwright install
+python -m esg_pipeline.ingestion.ingest_vietstock_docs --symbol TPB --out ./data/raw --pdf-text --year-from 2018
+python -m esg_pipeline.extraction.run_extract --symbol TPB --in ./data/raw --method llm --map --rules ./config/bank_rules.yaml --schema ./schema/esg_schema.json
+
 python cli/main.py map --config config/config.yaml
 python cli/main.py quality --config config/config.yaml
 python cli/main.py store --config config/config.yaml
@@ -152,7 +161,17 @@ conda activate esg-thesis
 
 # 3) Run
 python cli/main.py ingest
-python cli/main.py extract --strategy heuristic
+python cli/main.py extract --strategy llm
+pip install pyyaml ollama pymupdf tenacity httpx tqdm python-slugify rapidfuzz
+python -m esg_pipeline.extraction.run_extract \
+  --symbol TPB \
+  --in ./data/raw \
+  --method llm \
+  --provider ollama \
+  --model qwen2.5:7b-instruct \
+  --map \
+  --rules ./config/bank_rules.yaml \
+  --schema ./schema/esg_schema.json
 python cli/main.py map
 python cli/main.py quality
 python cli/main.py store
